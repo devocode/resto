@@ -7,11 +7,12 @@ var webpack = require('webpack');
 // Let's make this usable in other files by exporting the webpack.
 module.exports = {
   // This is going to serve for debugging our JS.
-  devtool: 'eval',
+  devtool: 'source-map',
 
   // This section asks "where do you want to start to compile from" and take an array of two items:
   entry: [
-    'webpack-hot-middleware', './src/app'
+    'webpack-hot-middleware/client',
+    './src/app'
   ],
 
   // This section is used to configure what your app will do after the initial files are found in the "entry" section above.

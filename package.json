@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "clean": "rimraf public"
+    "clean": "rimraf public",
+    "build:webpack": "NODE_ENV=production webpack --config ./webpack.config.prod.js --progress --colors",
+    "build": "npm run clean && npm run build:webpack"
   },
   "repository": {
     "type": "git",
