@@ -24,9 +24,9 @@ app.use('/public', publicPath);
 
 // Set up single-page app routing
 app.get('*', function(req, res){
-  res.sedFile(path.join(__dirnam, 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port);
 
-console.log(`I am listening to you through http://localhost:${port}...`);
+console.log(`I am listening on http://localhost:${port}...`);
